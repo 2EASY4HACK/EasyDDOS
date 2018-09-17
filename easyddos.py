@@ -14,7 +14,6 @@ year = now.year
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(20000)
 
 os.system("clear")
 
@@ -40,6 +39,7 @@ print "[===============     ] 75%"
 time.sleep(1)
 print "[====================] 100%"
 time.sleep(1)
+
  bytes = random._urandom(20000)
     timeout =  time.time() + duration
     sent = 3000
